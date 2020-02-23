@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+#showcase {
+  background-image: url(images/water.jpg);
+  background-size: 100% 100%;
+  background-position: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+#showcase h1 {
+  font-size: 50px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+#showcase p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.button {
+  background: none;
+  border: 2px solid #0e2729;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  min-width: 200px;
+  margin: 10px;
+  cursor: pointer;
+  transition: color 0.4s linear;
+  position: relative;
+  color: #fff;
+  box-shadow: 3px 3px 20px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0e2729;
+  z-index: -1;
+  transition: transform 0.5s;
+  transform-origin: 0 0;
+  transform: scaleX(0);
+  transition-timing-function: cubic-bezier(0.5, 1.5, 0.4, 0.7);
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+#section-a {
+  padding: 20px;
+  background: #e7984e;
+  color: #fff;
+  text-align: center;
+}
+
+#section-b {
+  padding: 20px;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+#section-c {
+  display: flex;
+}
+
+#section-c div {
+  padding: 20px;
+}
+
+#section-c .box-1,
+#section-c .box-3 {
+  background: #e7984e;
+  color: #fff;
+}
+
+#section-c .box-2 {
+  background: #f9f9f9;
+}
